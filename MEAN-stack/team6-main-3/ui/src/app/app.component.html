@@ -1,0 +1,53 @@
+<mat-toolbar color="warn" class="header">
+  <div href="#" class="navbar-brand">International Student Services</div>
+
+  <span class="nav-tool-items">
+    <mat-icon (click)="sidenav.toggle()" class="hamburger">menu</mat-icon>
+  </span>
+  <P> HI</P>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <!-- Sidenav -->
+  <mat-sidenav #sidenav [mode]="isBiggerScreen() ? 'over' : 'side'" [(opened)]="opened" [fixedInViewport]="true"
+    [fixedTopGap]>
+    <mat-nav-list>
+      <a href="#" class="navbar-brand">Menu</a>
+      <a mat-list-item routerLinkActive="active" routerLink="/scholarshipinfo">
+        <mat-icon>format_list_bulleted</mat-icon> Scholarship Information
+      </a>
+      <a mat-list-item routerLinkActive="active" routerLink="/rooms">
+        <mat-icon>format_list_bulleted</mat-icon> Home Finder
+      </a>
+      <a mat-list-item routerLinkActive="active" routerLink="/add-requirement">
+        <mat-icon>format_list_bulleted</mat-icon> Requirement
+      </a>
+      <a mat-list-item routerLinkActive="active" routerLink="/rooms">
+        <mat-icon>format_list_bulleted</mat-icon> List
+      </a>
+      <a mat-list-item routerLinkActive="active" routerLink="/requirements">
+        <mat-icon>format_list_bulleted</mat-icon> Student List
+      </a>
+      <a mat-list-item routerLinkActive="active" routerLink="/add">
+        <mat-icon>format_list_bulleted</mat-icon> Add
+      </a>
+      <a mat-list-item routerLinkActive="active" routerLink="/about">
+        <mat-icon>format_list_bulleted</mat-icon> About
+      </a>
+      <li class="nav-item">
+        <app-authentication-button></app-authentication-button>
+      </li>
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- Main content -->
+
+
+  <mat-sidenav-content>
+    <router-outlet>
+    </router-outlet>
+  </mat-sidenav-content>
+
+
+</mat-sidenav-container>

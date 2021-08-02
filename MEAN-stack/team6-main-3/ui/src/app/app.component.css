@@ -1,0 +1,31 @@
+
+
+.content {
+  height: calc(100vh - 98px);
+  border-radius: 10px;
+  margin: 16px;
+  margin-left: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+  color: rgb(207, 128, 128);
+}
+
+mat-toolbar
+{
+  background-color: #dac292;
+}
+mat-sidenav {
+  width: 300px;
+  background-color: #e6e2d3;
+}
+.sidenav-brand {
+  display: block;
+  text-align: center;
+}
+
+
+
